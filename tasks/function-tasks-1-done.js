@@ -9,9 +9,7 @@ console.groupCollapsed('1. Parašykite funkciją, kuri grąžina pirmą masyvo e
 }
 console.groupEnd();
 
-console.groupCollapsed(
-  '2. Parašykite funkciją, kuri pašalina pirmą masyvo elementą ir jį grąžina.'
-);
+console.groupCollapsed('2. Parašykite funkciją, kuri pašalina pirmą masyvo elementą ir jį grąžina.');
 {
   function firstArrayElementRemoved(array) {
     return array.shift();
@@ -29,9 +27,7 @@ console.groupCollapsed('3. Parašykite funkciją, kuri grąžina paskutinį masy
 }
 console.groupEnd();
 
-console.groupCollapsed(
-  '4. Parašykite funkciją, kuri pašalina paskutinį masyvo elementą ir jį grąžina.'
-);
+console.groupCollapsed('4. Parašykite funkciją, kuri pašalina paskutinį masyvo elementą ir jį grąžina.');
 {
   function lastArrayElementRemoved(array) {
     return array.pop();
@@ -49,14 +45,12 @@ console.groupCollapsed('5. Parašykite funkciją, kuri grąžina elementų kiek�
 }
 console.groupEnd();
 
-console.groupCollapsed(
-  '6. Parašykite funkciją, kuri atspausdina paskutinio masyvo elemento indeksą'
-);
+console.groupCollapsed('6. Parašykite funkciją, kuri atspausdina paskutinio masyvo elemento indeksą');
 {
-  function lastArrayElementIndex(array) {
+  function lastArrayLastIndex(array) {
     console.log(array.length - 1);
   }
-  lastArrayElementIndex(myNumberArray);
+  lastArrayLastIndex(myNumberArray);
 }
 console.groupEnd();
 
@@ -64,12 +58,12 @@ console.groupCollapsed(
   '7. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indeksus eilutėmis'
 );
 {
-  function logArrayIndex(array) {
+  function logArrayIndexes(array) {
     for (let i = 0; i < array.length; i++) {
       console.log(i);
     }
   }
-  logArrayIndex(myNumberArray);
+  logArrayIndexes(myNumberArray);
 }
 console.groupEnd();
 
@@ -77,12 +71,12 @@ console.groupCollapsed(
   '8. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento reikšmes eilutėmis'
 );
 {
-  function logArrayValue(array) {
+  function logArrayValues(array) {
     for (let i = 0; i < array.length; i++) {
       console.log(array[i]);
     }
   }
-  logArrayElements(myNumberArray);
+  logArrayValues(myNumberArray);
 }
 console.groupEnd();
 
@@ -98,7 +92,7 @@ console.groupCollapsed(
       console.log(`[${i}] => ${array[i]}`);
     }
   }
-  logArray(myNumberArray);
+  logArrayIndexAndValue(myNumberArray);
 }
 console.groupEnd();
 
@@ -106,7 +100,12 @@ console.groupCollapsed(
   '10. Parašykite funkciją, kuri atspausdina masyvo elementus atbuline tvarka eilutėmis, iš galo.'
 );
 {
-  // ...sprendimas ir spausdinimas
+  function logArrayValuesReverse(array) {
+    for (let i = array.length - 1; i >= 0; i--) {
+      console.log(array[i]);
+    }
+  }
+  logArrayValuesReverse(myNumberArray);
 }
 console.groupEnd();
 
@@ -114,7 +113,15 @@ console.groupCollapsed(
   '11. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indeksus vienoje eilutėje: 0 1 2 3 ...'
 );
 {
-  // ...sprendimas ir spausdinimas
+  function logArrayIndex(array) {
+    let result = '';
+    for (let i = 0; i < array.length; i++) {
+      result += `${i} `;
+    }
+    console.log(result.trim());
+  }
+
+  logArrayIndex(myNumberArray);
 }
 console.groupEnd();
 
@@ -122,7 +129,15 @@ console.groupCollapsed(
   '12. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento reikšmes vienoje eilutėje: -111 2 -9 48'
 );
 {
-  // ...sprendimas ir spausdinimas
+  function logArrayValue(array) {
+    let result = '';
+    for (let i = 0; i < array.length; i++) {
+      result += `${array[i]} `;
+    }
+    console.log(result.trim());
+  }
+
+  logArrayValue(myNumberArray);
 }
 console.groupEnd();
 
@@ -131,6 +146,14 @@ console.groupCollapsed(
 );
 //  [0]=>17 [1]=>8 [2]=>88 ..
 {
-  // ...sprendimas ir spausdinimas
+  function logArrayIndexAndValue(array) {
+    let result = '';
+    for (let i = 0; i < array.length; i++) {
+      result += `[${i}]=>${array[i]} `;
+    }
+    console.log(result);
+  }
+
+  logArrayIndexAndValue(myNumberArray);
 }
 console.groupEnd();
