@@ -9,8 +9,8 @@ console.groupCollapsed('1. Parašykite rekursinę funkciją, kuri suskaičiuotų
 console.groupEnd();
 console.groupCollapsed('2. Parašykite rekursinę funkciją, kuri grąžina string žodį atvirkščia tvarka.');
 {
-  function reverseString(str) {
-    return str.length !== 1 ? reverseString(str.substr(1)) + str[0] : str;
+  function reverseString(string) {
+    return string.length !== 1 ? reverseString(string.substr(1)) + string[0] : string;
   }
   console.log(reverseString('labas'));
 }
