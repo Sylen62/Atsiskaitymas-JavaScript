@@ -10,7 +10,7 @@ console.groupCollapsed('1 - https://edabit.com/challenge/nuXdWHAoHv9y38sn7');
   }
 
   drinks.sort(sortDrinkByPrice);
-  console.log(drinks);
+  console.table(drinks);
 }
 console.groupEnd();
 

@@ -204,19 +204,19 @@ console.groupEnd();
 
 console.groupCollapsed('1. Atspausdinti visus Informatikos fakulteto studentus');
 {
-  console.log(students.filter((student) => student.faculty === 'Informatikos fakultetas'));
+  console.table(students.filter((student) => student.faculty === 'Informatikos fakultetas'));
 }
 console.groupEnd();
 
 console.groupCollapsed('2. Atspausdinti visus Chemijos fakulteto studentus');
 {
-  console.log(students.filter((student) => student.faculty === 'Chemijos fakultetas'));
+  console.table(students.filter((student) => student.faculty === 'Chemijos fakultetas'));
 }
 console.groupEnd();
 
 console.groupCollapsed('3. Atspausdinti visus Elektros ir elektronikos fakulteto studentus');
 {
-  console.log(students.filter((student) => student.faculty === 'Elektros ir elektronikos fakultetas'));
+  console.table(students.filter((student) => student.faculty === 'Elektros ir elektronikos fakultetas'));
 }
 console.groupEnd();
 
@@ -282,25 +282,25 @@ console.groupEnd();
 
 console.groupCollapsed('7. Atspausdinti tik pirmo kurso studentus');
 {
-  console.log(students.filter((student) => student.course === 1));
+  console.table(students.filter((student) => student.course === 1));
 }
 console.groupEnd();
 
 console.groupCollapsed('8. Atspausdinti tik antro kurso studentus');
 {
-  console.log(students.filter((student) => student.course === 2));
+  console.table(students.filter((student) => student.course === 2));
 }
 console.groupEnd();
 
 console.groupCollapsed('9. Atspausdinti tik trečio kurso studentus');
 {
-  console.log(students.filter((student) => student.course === 3));
+  console.table(students.filter((student) => student.course === 3));
 }
 console.groupEnd();
 
 console.groupCollapsed('10. Atspausdinti tik ketvirto kurso studentus');
 {
-  console.log(students.filter((student) => student.course === 4));
+  console.table(students.filter((student) => student.course === 4));
 }
 console.groupEnd();
 

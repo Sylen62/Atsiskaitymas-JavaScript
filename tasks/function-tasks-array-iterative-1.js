@@ -68,15 +68,11 @@ console.groupEnd();
 
 console.groupCollapsed('3. Atspausdinkite visų žmonių vardus ir pavardes bei santuokos statusą');
 {
-  people.forEach((person) =>
-    console.log(`${person.name} ${person.surname} ${person.married ? 'married' : 'not married'}`)
-  );
+  people.forEach((person) => console.log(`${person.name} ${person.surname} ${person.married ? 'married' : 'not married'}`));
 }
 console.groupEnd();
 
-console.groupCollapsed(
-  '4. Sukurtite masyvą su lytimis ir uždirbamu pinigų kiekiu, pagal pradinį žmonių masyvą'
-);
+console.groupCollapsed('4. Sukurtite masyvą su lytimis ir uždirbamu pinigų kiekiu, pagal pradinį žmonių masyvą');
 {
   const sexIncomeArray = people.map((person) => ({
     sex: person.sex,
@@ -113,9 +109,7 @@ console.groupEnd();
 
 console.groupCollapsed('8. Atspausdinkite žmonių vardus ir pavardes, kurie turi mašinas');
 {
-  people
-    .filter((person) => person.hasCar)
-    .forEach((person) => console.log(`${person.name} ${person.surname}`));
+  people.filter((person) => person.hasCar).forEach((person) => console.log(`${person.name} ${person.surname}`));
 }
 console.groupEnd();
 
@@ -126,9 +120,7 @@ console.groupCollapsed('9. Atspausdinkite žmones kurie yra susituokę');
 }
 console.groupEnd();
 
-console.groupCollapsed(
-  '10. Sukurkite objektą, kuriame būtų apskaičiuotas vairuojančių žmonių kiekis pagal lytį'
-);
+console.groupCollapsed('10. Sukurkite objektą, kuriame būtų apskaičiuotas vairuojančių žmonių kiekis pagal lytį');
 {
   const driverCountBySex = people.reduce(
     (totalBySex, { sex }) => {
@@ -146,9 +138,7 @@ console.groupCollapsed(
 }
 console.groupEnd();
 
-console.groupCollapsed(
-  '11. Performuokite žmonių masyvą, jog kiekvieno žmogaus savybė "income", taptų "salary"'
-);
+console.groupCollapsed('11. Performuokite žmonių masyvą, jog kiekvieno žmogaus savybė "income", taptų "salary"');
 {
   const newPeopleArray = people.map(({ income, ...person }) => ({
     ...person,
@@ -158,9 +148,7 @@ console.groupCollapsed(
 }
 console.groupEnd();
 
-console.groupCollapsed(
-  '12. Suformuokite žmonių masyvą iš objektų, kuriuose nebūtų lyties, vardo ir pavardės'
-);
+console.groupCollapsed('12. Suformuokite žmonių masyvą iš objektų, kuriuose nebūtų lyties, vardo ir pavardės');
 {
   const newPeopleArray = people.map(({ name, surname, sex, ...person }) => ({
     ...person,

@@ -130,9 +130,7 @@ console.group('8. Sukurkite funkciją, kuri grąžina pirmo ir antro parametro b
 console.groupEnd();
 console.log();
 
-console.group(
-  "9. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 'a' raidė, priešingu atveju <false>"
-);
+console.group("9. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 'a' raidė, priešingu atveju <false>");
 {
   function containsLetterA(str) {
     return str.includes('a');
@@ -148,9 +146,7 @@ console.group(
 console.groupEnd();
 console.log();
 
-console.group(
-  '10. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 2 parametru perduoda raidė, priešingu atveju false'
-);
+console.group('10. Sukurkite funkciją, kuri grąžina <true>, jeigu žodyje yra 2 parametru perduoda raidė, priešingu atveju false');
 {
   function containsLetter(str, letter) {
     return str.includes(letter);
@@ -281,9 +277,7 @@ console.group("17. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusė
 console.groupEnd();
 console.log();
 
-console.group(
-  '18. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusės) vartotojo perduotos raidės vietą žodyje'
-);
+console.group('18. Sukurkite funkciją, kuri grąžina pirmos (nuo kairės pusės) vartotojo perduotos raidės vietą žodyje');
 {
   function lastIndexOfLetter(str, searchLetter) {
     return str.lastIndexOf(searchLetter) >= 0 ? str.lastIndexOf(searchLetter) : 'Nėra';
@@ -299,9 +293,7 @@ console.group(
 console.groupEnd();
 console.log();
 
-console.group(
-  "19. Sukurkite funkciją, kuri grąžina indeksų masyvą su visais 'a' raidės pasikartojimais žodyje"
-);
+console.group("19. Sukurkite funkciją, kuri grąžina indeksų masyvą su visais 'a' raidės pasikartojimais žodyje");
 {
   function indexesOfLetterA(str) {
     const newArray = [];
@@ -319,9 +311,7 @@ console.group(
 console.groupEnd();
 console.log();
 
-console.group(
-  '20. Sukurkite funkciją, kuri grąžina indeksų masyvą su visais vartotojo įvestos raidės pasikartojimais žodyje'
-);
+console.group('20. Sukurkite funkciją, kuri grąžina indeksų masyvą su visais vartotojo įvestos raidės pasikartojimais žodyje');
 {
   function indexesOfLetter(str, searchLetter) {
     if (isNaN(searchLetter) === false) return 'Reikia raidės';
@@ -340,9 +330,7 @@ console.group(
 console.groupEnd();
 console.log();
 
-console.group(
-  "21. Sukurkite funkciją, kuri ištrintų pirmą surastą 'a' raidę žodyje ir grąžintų pakeistą žodį"
-);
+console.group("21. Sukurkite funkciją, kuri ištrintų pirmą surastą 'a' raidę žodyje ir grąžintų pakeistą žodį");
 {
   function removeFirstLetterA(str) {
     const index = str.indexOf('a');
@@ -360,9 +348,7 @@ console.group(
 console.groupEnd();
 console.log();
 
-console.group(
-  "22. Sukurkite funkciją, kuri ištrintų paskutinę surastą 'a' raidę žodyje ir grąžintų pakeistą žodį"
-);
+console.group("22. Sukurkite funkciją, kuri ištrintų paskutinę surastą 'a' raidę žodyje ir grąžintų pakeistą žodį");
 {
   function removeLastLetterA(str) {
     const index = str.lastIndexOf('a');
@@ -454,9 +440,7 @@ console.group(
 console.groupEnd();
 console.log();
 
-console.group(
-  '27. Sukurkite funkciją, kuri pirmu parametru priima sakinį, ir kiekvieno žodžio pirmają raidę padaro didžiąja'
-);
+console.group('27. Sukurkite funkciją, kuri pirmu parametru priima sakinį, ir kiekvieno žodžio pirmają raidę padaro didžiąja');
 {
   function capitalize(str) {
     // ^ - eina nuo pradžios. \w - suranda betkoki pirmą ženklą. \s - suranda tarpą.
@@ -492,9 +476,7 @@ console.log();
 //  mamam -> true
 //  123321 -> true
 //  123456 -> false
-console.group(
-  '29. Sukurkite funkciją, kuri grąžina <true>, jeigu žodis yra palindromas (taip pat skaitosi iš abiejų pusių)'
-);
+console.group('29. Sukurkite funkciją, kuri grąžina <true>, jeigu žodis yra palindromas (taip pat skaitosi iš abiejų pusių)');
 {
   function isPalyndrome(str) {
     return str == str.split('').reverse().join('') ? true : false;
@@ -518,26 +500,6 @@ console.log();
 //    mėgstu pieną , bet medų nelabai.labanakt. -> Mėgstu pieną, bet medų nelabai. Labanakt.
 console.group('30. Sukurkite funkciją, kuri taiso pastraipos klaidas');
 {
-  function capitalizeFirstWord(str) {
-    return str[0].toUpperCase() + str.substring(1);
-  }
-  function splitIntoSentences(paragraph) {
-    const result = {
-      sentences: [],
-      separators: [],
-    };
-    let sentenceStart = 0;
-    for (let i = 0; i < paragraph.length; i++) {
-      const symbol = paragraph[i];
-      if (['.', '?', '!'].includes(symbol)) {
-        const sentence = capitalizeFirstWord(paragraph.slice(sentenceStart, i).trim());
-        result.sentences.push(sentence);
-        result.separators.push(symbol);
-        sentenceStart = i + 1;
-      }
-    }
-    return result;
-  }
   function reduceEmptySpaces(str) {
     for (let i = str.length - 1; i >= 0; i--) {
       const letter = str[i];
@@ -548,15 +510,38 @@ console.group('30. Sukurkite funkciją, kuri taiso pastraipos klaidas');
     }
     return str;
   }
-  function fixParagraph(paragraph) {
-    const { sentences, separators } = splitIntoSentences(paragraph);
-    let result = '';
-    for (let i = 0; i < sentences.length; i++) {
-      const sentence = reduceEmptySpaces(sentences[i]);
-      result += sentence + separators.shift() + ' ';
-    }
+
+  function capitalizeFirstWord(str) {
+    return str[0].toUpperCase() + str.substring(1);
+  }
+
+  function splitIntoSentences(paragraph) {
+    const result = {
+      sentences: [],
+      separators: [],
+    };
+    let sentenceStart = 0;
+    [...paragraph].forEach((symbol, i) => {
+      if (['.', '?', '!'].includes(symbol)) {
+        const sentence = capitalizeFirstWord(paragraph.slice(sentenceStart, i).trim());
+        result.sentences.push(sentence);
+        result.separators.push(symbol);
+        sentenceStart = ++i;
+      }
+    });
     return result;
   }
+
+  function fixParagraph(paragraph) {
+    let result = '';
+    const { sentences, separators } = splitIntoSentences(paragraph);
+    sentences.forEach((string) => {
+      const sentence = reduceEmptySpaces(string);
+      result += sentence + separators.shift() + ' ';
+    });
+    return result;
+  }
+
   const paragraph = '    labas , as jonas . Tave      vadina Kęstu? Taip ir žinojau  !    ';
   const fixedParagraph = fixParagraph(paragraph);
   console.log(paragraph);
@@ -566,12 +551,9 @@ console.group('30. Sukurkite funkciją, kuri taiso pastraipos klaidas');
 console.groupEnd();
 console.log();
 
-//! PERDARYTI KAD NEBUTU KAIP PAS DESTYTOJA
 // 31. Sukurkite funkciją, kuri pirmu parametru priima sakinį ir sudeda atskirus sakinio žodžius į masyvą:
 //  labas, aš esu grybas -> ['labas', 'aš', 'esu', 'grybas']
-console.group(
-  '31. Sukurkite funkciją, kuri pirmu parametru priima sakinį ir sudeda atskirus sakinio žodžius į masyvą'
-);
+console.group('31. Sukurkite funkciją, kuri pirmu parametru priima sakinį ir sudeda atskirus sakinio žodžius į masyvą');
 {
   function splitSentence(sentence) {
     return sentence.split(' ');

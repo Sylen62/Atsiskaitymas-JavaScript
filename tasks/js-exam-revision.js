@@ -219,7 +219,6 @@ console.groupCollapsed('0 užduotis - Pasinaudojant 1 dalies elementų masyvu, s
       return Math.round(weight / Math.pow(height / 100, 2));
     }
 
-    //! Ar tinka taip
     toString() {
       console.log(
         `${this.name} ${this.surname}\n\tAmžius: ${this.age} Ūgis: ${this.height} Svoris: ${this.weight} Lytis: ${this.sex}`
@@ -228,7 +227,7 @@ console.groupCollapsed('0 užduotis - Pasinaudojant 1 dalies elementų masyvu, s
   }
 
   const peopleArray = [];
-  people.forEach((person) => peopleArray.push(new Person(person)));
+  people.forEach((person) => peopleArray.push(new Person(person))); // Panaudoti map
   // console.log(peopleArray);
   // peopleArray[0].toString();
 
