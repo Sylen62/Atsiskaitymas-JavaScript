@@ -1,15 +1,23 @@
 console.groupCollapsed('1. Parašykite rekursinę funkciją, kuri suskaičiuotų "string"o ilgį.');
 {
-  // ... code
+  function stringLength(string, length) {
+    length = length || 0;
+    if (string.length) return stringLength(string.substr(1), ++length);
+    return length;
+  }
+  console.log(stringLength('1234'));
 }
 console.groupEnd();
 console.groupCollapsed('2. Parašykite rekursinę funkciją, kuri grąžina string žodį atvirkščia tvarka.');
 {
-  // ... code
+  function reverseString(str) {
+    return str.length !== 1 ? reverseString(str.substr(1)) + str[0] : str;
+  }
+  console.log(reverseString('labas'));
 }
 console.groupEnd();
 
-console.groupCollapsed('3. Atspausdinti failu struktūrą naudojant rekursiją')
+console.groupCollapsed('3. Atspausdinti failu struktūrą naudojant rekursiją');
 {
   const myFolder = {
     type: 'folder',
@@ -17,7 +25,7 @@ console.groupCollapsed('3. Atspausdinti failu struktūrą naudojant rekursiją')
     files: [
       {
         type: 'file',
-        name: 'komandos.txt'
+        name: 'komandos.txt',
       },
       {
         type: 'folder',
@@ -29,13 +37,13 @@ console.groupCollapsed('3. Atspausdinti failu struktūrą naudojant rekursiją')
             files: [
               {
                 type: 'file',
-                name: 'index.html'
+                name: 'index.html',
               },
               {
                 type: 'file',
-                name: 'main.css'
+                name: 'main.css',
               },
-            ]
+            ],
           },
           {
             type: 'folder',
@@ -43,14 +51,14 @@ console.groupCollapsed('3. Atspausdinti failu struktūrą naudojant rekursiją')
             files: [
               {
                 type: 'file',
-                name: 'index.html'
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+                name: 'index.html',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
   function printFiles(file, prefix = '') {
     // ... code
   }
@@ -63,7 +71,7 @@ console.groupCollapsed('3. Atspausdinti failu struktūrą naudojant rekursiją')
   // ------main.css
   // ----2 pamoka /
   // ------index.html
-  //    
+  //
 }
 console.groupEnd();
 
@@ -78,8 +86,8 @@ console.groupCollapsed('4. Parašyti funkciją, kuri surastų objektuose arba ma
       9,
       {
         q: 7,
-        z: [4, 8, 9]
-      }
+        z: [4, 8, 9],
+      },
     ],
     8,
     {
@@ -91,10 +99,10 @@ console.groupCollapsed('4. Parašyti funkciją, kuri surastų objektuose arba ma
         {
           j: 7,
           p: 8,
-          z: [7, 7, 7]
-        }
-      ]
-    }
+          z: [7, 7, 7],
+        },
+      ],
+    },
   ];
   function sumNumbers(data) {
     // ... code
@@ -102,4 +110,4 @@ console.groupCollapsed('4. Parašyti funkciją, kuri surastų objektuose arba ma
   // console.log(sumNumbers(data1)) // 121
 }
 
-''
+('');
