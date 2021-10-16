@@ -2,8 +2,7 @@ console.groupCollapsed('1. Parašykite rekursinę funkciją, kuri suskaičiuotų
 {
   function stringLength(string, length) {
     length = length || 0;
-    if (string.length) return stringLength(string.substr(1), ++length);
-    return length;
+    return string.length ? stringLength(string.substr(1), ++length) : length;
   }
   console.log(stringLength('1234'));
 }
